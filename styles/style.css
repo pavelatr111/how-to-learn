@@ -28,7 +28,7 @@
   width: 568px;
   background-color:  #2f80ed;
   position: absolute;
-  right: 0px;
+  right: 0;
   top: 64px;
   z-index: 1;
 }
@@ -70,6 +70,10 @@
   color:  #2f80ed;
 }
 
+.header__link:hover {
+  color: crimson;
+}
+
 .header__link::after{
   content: " \2192";
 }
@@ -94,7 +98,6 @@
   width: 80%;
   display: flex;
   justify-content: space-between;
-  margin: 100px 0;
 }
 
 .two-columns__brief{
@@ -166,6 +169,9 @@
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
+  padding: 0;
+  list-style-type: none;
+  margin: 0;
 }
 
 .table__cell{
@@ -190,7 +196,8 @@
 }
 
 .feynman{
-  height: 790px;
+  padding-top: 100px;
+  min-height: 790px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -230,11 +237,12 @@
   top: 50%;
   right: 48px;
 }
+.feynman__link:hover {
+  color: crimson;
+}
 
 .feynman__link::after{
   content: " \2192";
-  text-decoration: none;
-  color:  #2f80ed;
 }
 
 .kaufman{
@@ -247,6 +255,7 @@
   overflow: hidden;
   padding-top: 90px;
   padding-bottom: 90px;
+  z-index: 1;
 }
 
 .section-title_theme_dark{
@@ -275,7 +284,8 @@
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  z-index: 0;
+  padding: 0;
+  list-style-type: none;
 }
 
 .table__cell_theme_dark {
@@ -283,6 +293,7 @@
   color: white;
   margin-right: 0;
   margin-top: 80px;
+  padding: 0;
 }
 .table__heading_theme_dark{
   font-size: 24px;
@@ -298,6 +309,8 @@
   margin: 0px;
 }
 .kaufman__triangle{
+  background-image: url(../images/kaufman-triangle.svg);
+  background-size: contain;
   width: 877px;
   height: 877px;
   position: absolute;
@@ -307,6 +320,7 @@
 }
 
 .footer{
+  box-sizing: border-box;
   min-height: 350px;
   display: flex;
   justify-content: center;
@@ -357,18 +371,26 @@
 .footer__column-links{
   margin-top: 20px;
   margin-bottom: 16px;
+  padding: 0;
+  list-style-type: none;
 }
 
 .footer__column-link{
   display: flex;
   flex-direction: row;
+  align-items: center;
   margin:0px;
   line-height: 30px;
   font-size: 18px;
   color: white;
   text-decoration: none;
 }
+.footer__column-link:hover {
+  color: crimson;
+}
+
 .footer__social-icon{
-  size: 16px 16px;
+  width: 16px;
+  height: 16px;
   padding-right: 10px;
 }
