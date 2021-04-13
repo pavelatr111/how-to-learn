@@ -1,3 +1,11 @@
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to{
+    transform: rotate(360deg);
+  }
+}
 .page {
   min-width: 1100px;
   /* мы ещё не умеем делать мобильную версию сайта, */
@@ -19,10 +27,15 @@
   display: flex;
   align-items: center;
   background-color:  #f2f2f2;
+  overflow: hidden;
   /* выше установили ограничения для секции */
 }
 
 /* ниже мы привели пример двух селекторов, чтобы вы вспомнили запись элемента */
+.rotation {
+  animation: rotation 20s linear infinite normal;
+}
+
 .header__square-pic {
   height: 568px;
   width: 568px;
@@ -138,11 +151,95 @@
   margin-bottom: 0px;
 }
 
-.digits{
+.techniques {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: auto;
+  padding-top: 100px;
+}
+
+.cards {
+  display: flex;
+  width: 920px;
+  justify-content: start;
+  flex-wrap: wrap;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.cards__item {
+  display: flex;
+  flex-direction: column;
+  width: 240px;
+  align-items: center;
+  margin: 0;
+  margin-right: 100px;
+}
+.cards__item:nth-of-type(3n) {
+  margin-right: 0px;
+}
+
+.cards__image {
+  padding: 60px 40px 43px ;
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+}
+
+.cards__title {
+  padding-bottom: 16px;
+  margin: 0;
+  line-height: 1.15;
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.cards__description {
+  margin: 0;
+  line-height: 23px;
+  font-size: 18px;
+  font-weight: normal;
+  text-align: center;
+}
+
+.video{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 100px;
+}
+
+.video__iframes {
+  margin: 0;
+  margin-top: 50px;
+}
+
+.video__iframe {
+  margin-right: 20px;
+  margin-bottom: -50px;
+}
+
+.video__iframe:last-of-type {
+  margin-right: 0px;
+}
+
+.oakley {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 160px;
+  background-color: #f2f2f2;
+}
+.digits {
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 100px 0px;
+  list-style-type: none;
 }
 
 .section-title{
@@ -161,7 +258,7 @@
   font-weight: normal;
   text-align: center;
   margin: 0px;
-  margin-top: 20px;
+  padding-top: 20px;
 }
 
 .table{
@@ -196,7 +293,7 @@
 }
 
 .feynman{
-  padding-top: 100px;
+  padding-top: 80px;
   min-height: 790px;
   display: flex;
   flex-direction: column;
@@ -245,6 +342,80 @@
   content: " \2192";
 }
 
+.khan{
+  margin: 0;
+  padding-top: 105px;
+  background-color: #f2f2f2;
+}
+
+.khan__container {
+  width: 80%;
+  margin: auto;
+}
+
+.khan__author {
+  margin: 0;
+  line-height: 42px;
+  font-size: 30px;
+}
+
+.khan__title {
+  margin: 0;
+  line-height: 1.15;
+  font-size: 60px;
+  font-weight: bold;
+}
+.khan__quote {
+  margin: 0;
+  width: 790px;
+  line-height: 34px;
+  font-size: 24px;
+  font-weight: normal;
+  padding-top: 50px;
+  padding-bottom: 36px;
+}
+
+.khan__quote-author {
+  margin: 0;
+  line-height: 1.15;
+  font-size: 24px;
+  font-weight: bold;
+  padding-bottom: 10px;
+}
+
+.khan__quote-author-subline {
+  margin: 0;
+  line-height: 1.15;
+  font-size: 24px;
+  font-weight: normal;
+  padding-bottom: 68px;
+}
+
+.khan__book-container{
+  display: flex;
+  flex-direction: row;
+}
+.khan__book-pic {
+  width: 620px;
+  height: 608px;
+  object-position:0 0;
+  object-fit: cover;
+  padding-right: 48px;
+}
+
+.khan__book-link{
+  margin: 0;
+  line-height: 42px;
+  font-size: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  color:  #2f80ed;
+}
+
+.khan__book-link::after{
+  content: " \2192";
+}
+
 .kaufman{
   display: flex;
   flex-direction: column;
@@ -289,6 +460,24 @@
   top: 0px;
   right: -210px;
   z-index: -1;
+}
+
+.resources {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 100px 0 217px;
+}
+.resources__logo-zone {
+  margin: 0;
+  width: 1100px;
+  padding-top: 80px;
+}
+
+.resources__logo {
+  width: 270px;
+  height: 38px;
 }
 
 .footer{
