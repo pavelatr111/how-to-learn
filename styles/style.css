@@ -81,10 +81,12 @@
 .header__link{
   text-decoration: none;
   color:  #2f80ed;
+  opacity: 1;
 }
 
 .header__link:hover {
-  color: crimson;
+  opacity: 0.5;
+  transition: opacity 0.3s ease;
 }
 
 .header__link::after{
@@ -178,6 +180,7 @@
   margin: 0;
   margin-right: 100px;
 }
+
 .cards__item:nth-of-type(3n) {
   margin-right: 0px;
 }
@@ -333,9 +336,11 @@
   position: absolute;
   top: 50%;
   right: 48px;
+  opacity: 1;
 }
 .feynman__link:hover {
-  color: crimson;
+  opacity: 0.5;
+  transition: opacity 0.3s ease;
 }
 
 .feynman__link::after{
@@ -395,6 +400,7 @@
   display: flex;
   flex-direction: row;
 }
+
 .khan__book-pic {
   width: 620px;
   height: 608px;
@@ -410,6 +416,12 @@
   font-weight: bold;
   text-decoration: none;
   color:  #2f80ed;
+  opacity: 1;
+}
+
+.khan__book-link:hover {
+  opacity: 0.5;
+  transition: opacity 0.3s ease;
 }
 
 .khan__book-link::after{
@@ -514,6 +526,7 @@
   font-size: 18px;
   font-weight: normal;
 }
+
 .footer__column_content_info{
   margin: 0px;
   display: flex;
